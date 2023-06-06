@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #ff0932;
+    --secondary-color: #345678;
+    --text-color: #000000;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+  }
+  
+  /* Aquí puedes agregar más estilos globales si es necesario */
+  
