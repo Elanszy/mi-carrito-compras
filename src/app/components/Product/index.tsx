@@ -12,7 +12,7 @@ const Product = ({ product, index, handleIncrement, handleDecrement, handleRemov
         <span>{product.count}</span>
         <button className= 'button' onClick={() => handleIncrement(index)}>+</button>
       </div>
-      <button className= 'button' onClick={() => handleRemove(index)}>Sacar del carrito</button>
+      <button className= 'button2' onClick={() => handleRemove(index)}>Quitar</button>
     </div>
   );
 };

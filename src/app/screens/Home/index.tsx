@@ -60,18 +60,20 @@ const Home = () => {
     </div>
   
     <div className="cart-section">
-      <h2>Productos en el Carrito</h2>
-      <div> 
-        {products.map((product, index) => (
-          <Product
-            key={index}
-            product={product}
-            index={index}
-            handleIncrement={handleIncrementCount}
-            handleDecrement={handleDecrementCount}
-            handleRemove={handleRemoveProduct}
-          />
-      ))}
+      <h2>Productos en el Carrito</h2> 
+      <div className="list-product">
+        <div> 
+          {products.map((product, index) => (
+            <Product
+              key={index}
+              product={product}
+              index={index}
+              handleIncrement={handleIncrementCount}
+              handleDecrement={handleDecrementCount}
+              handleRemove={handleRemoveProduct}
+            /> 
+          ))}
+        </div> 
       </div>
     </div>
   </main>
