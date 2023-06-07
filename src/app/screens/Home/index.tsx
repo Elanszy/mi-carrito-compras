@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Product from './../../components/Product';
 import Form from './../../components/Form';
-import './styles.module.css'; 
+import './styles.home.css'; 
 import { FiShoppingCart } from 'react-icons/fi';
 
 const Home = () => {
@@ -43,35 +43,39 @@ const Home = () => {
   };
 
   return ( 
-  <main> 
-    <header className='cabeza'>Mi Carrito</header>
-  <div className='container'> 
-    <div id="carga">
-      <Form handleAddProduct={handleAddProduct} />
-      <footer> 
-        Elian Simmons Web 2023
-      </footer>
-    </div>  
+    <main>
+    <header className="cabeza">
+      <h1>Mi Carrito</h1>
+      <div className="total-price">
+        <FiShoppingCart className="cart-icon" />
+        Precio total: ${totalPrice}
+      </div>
+    </header>
+  
+    <div className="container">
+      <div id="carga">
+        <Form handleAddProduct={handleAddProduct} />
+      </div>
+      <footer>Elian Simmons Web 2023</footer>
+    </div>
+  
     <div className="cart-section">
       <h2>Productos en el Carrito</h2>
-      <div className="product-list">
+      <div> 
         {products.map((product, index) => (
-        <Product
-          key={index}
-          product={product}
-          index={index}
-          handleIncrement={handleIncrementCount}
-          handleDecrement={handleDecrementCount}
-          handleRemove={handleRemoveProduct}
-        />
-      ))}  
+          <Product
+            key={index}
+            product={product}
+            index={index}
+            handleIncrement={handleIncrementCount}
+            handleDecrement={handleDecrementCount}
+            handleRemove={handleRemoveProduct}
+          />
+      ))}
       </div>
-      <div className="total-price"><FiShoppingCart className="cart-icon" /> 
-      Precio total: ${totalPrice}     
-      </div>
-    </div> 
-  </div> 
+    </div>
   </main>
+  
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react'; 
-import './styles.module.css'
+import './styles.product.css'
 
 const Product = ({ product, index, handleIncrement, handleDecrement, handleRemove }) => {
   return (

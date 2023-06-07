@@ -1,5 +1,5 @@
 import React, { useState } from 'react'; 
-import './styles.module.css'
+import './styles.form.css'
 
 const Form = ({ handleAddProduct }) => {
   const [name, setName] = useState('');

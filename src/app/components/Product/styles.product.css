@@ -1,11 +1,17 @@
 /* Product.styles.module.css */
-.product-card {
-  border: 1px solid #ccc;
-  border-radius: 400000px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.product-card {  
+  float: left;
+  flex: 0 0 calc(33.33% - 20px);
+  /* El 20px es el espacio entre los rectángulos */
+  background-color: blue;
+  border-top: 2px solid #ccc;
+  border-right: 1px dashed #ccc;
+  border-bottom: 2px dotted #ccc;
+  border-left: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  background-color: #fff; 
-
+  
 
 }
 
